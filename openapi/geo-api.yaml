@@ -1,0 +1,59 @@
+openapi: 3.1.0
+info:
+  title: geo-api
+  version: '1.0'
+  summary: Location Service
+  description: Location Service provides a location data by an ip address.
+servers:
+  - url: 'http://localhost:8090'
+    description: Local env
+paths:
+  /v1/location/look-up:
+    post:
+      summary: ''
+      operationId: post-v1-location-look-up
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocationData'
+      description: Get GeoIP2 details by IP address
+      security:
+        - API-KEY: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IpAddress'
+        description: ''
+components:
+  schemas:
+    LocationData:
+      type: object
+      properties:
+        countyIsoCode:
+          type: string
+          description: The two-character ISO 3166-1 alpha code for the country.
+        timeZone:
+          type: string
+      required:
+        - countyIsoCode
+      examples: []
+      title: 'LocationData'
+    IpAddress:
+      title: IpAddress
+      type: object
+      properties:
+        ipAddress:
+          type: string
+          description: IP Address (v4/v6)
+      required:
+        - ipAddress
+  securitySchemes:
+    API-KEY:
+      name: API-KEY
+      type: apiKey
+      in: header
+      description: 'API-KEY'
