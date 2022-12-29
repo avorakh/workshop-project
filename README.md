@@ -21,7 +21,7 @@ More details in [GeoIP2-City-Test.json](https://github.com/maxmind/MaxMind-DB/bl
 | 175.16.199.10 | CN               | Asia/Harbin         |
 | 2.125.160.216 | GB               | Europe/London       |
 | 2001:298::    | JP               | Asia/Tokyo          |
-| 2a02:e580::   | NO               | Europe/Osl          |
+| 2a02:e580::   | NO               | Europe/Oslo         |
 | 2a02:d0c0::   | RU               | -                   |
 | 102.12.32.2   | -                | -                   |
 
