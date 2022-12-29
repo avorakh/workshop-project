@@ -1,0 +1,6 @@
+dependencies {
+    api projects.geoip2Pub
+    implementation libs.jackson.databind
+
+    testImplementation libs.bundles.test.spock.core
+}

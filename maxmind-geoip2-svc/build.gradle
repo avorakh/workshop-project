@@ -1,0 +1,9 @@
+dependencies {
+    api projects.geoip2Svc
+
+    implementation libs.maxmind.geoip2
+    compileOnly libs.slf4j.api
+
+    integrationTestImplementation libs.bundles.test.spock.core
+    integrationTestImplementation libs.logback.classic
+}

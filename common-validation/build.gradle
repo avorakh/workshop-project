@@ -1,0 +1,10 @@
+dependencies {
+    compileOnly libs.jakarta.validation.api
+    
+    integrationTestImplementation libs.bundles.test.spock.core
+    integrationTestImplementation libs.bundles.test.jakarta.validation
+    
+    integrationTestCompileOnly libs.lombok
+    integrationTestAnnotationProcessor libs.lombok
+    integrationTestCompileOnly libs.jetbrains.annotations
+}

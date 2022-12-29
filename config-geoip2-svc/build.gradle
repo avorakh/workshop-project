@@ -1,0 +1,13 @@
+dependencies {
+    api projects.geoip2Svc
+    compileOnly projects.maxmindGeoip2Svc
+    compileOnly libs.slf4j.api
+    compileOnly libs.maxmind.geoip2
+    compileOnly libs.spring.context
+
+    testImplementation libs.bundles.test.spock.core
+    testImplementation libs.logback.classic
+    testImplementation libs.spring.context
+    testImplementation projects.maxmindGeoip2Svc
+    testImplementation libs.maxmind.geoip2
+}

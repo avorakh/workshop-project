@@ -1,0 +1,50 @@
+[versions]
+lombok = '1.18.24'
+jb-annotation = '23.1.0'
+
+groovy = '4.0.7'
+spock = '2.4-M1-groovy-4.0'
+
+jackson = '2.14.1'
+
+geoip2 = '4.0.0'
+
+slf4j = '2.0.6'
+logback = '1.4.5'
+
+spring-boot = '3.0.1'
+spring = '6.0.3'
+
+jakarta-validation = '3.0.2'
+jakarta-el = '5.0.1'
+glassfish-jakarta-el = '5.0.0-M1'
+hibernate-validator = '8.0.0.Final'
+
+[libraries]
+lombok = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }
+jetbrains-annotations = { module = 'org.jetbrains:annotations', version.ref = 'jb-annotation' }
+
+groovy-all = { module = 'org.apache.groovy:groovy-all', version.ref = 'groovy' }
+spock-core = { module = 'org.spockframework:spock-core', version.ref = 'spock' }
+
+jackson-databind = { module = 'com.fasterxml.jackson.core:jackson-databind', version.ref = 'jackson' }
+
+maxmind-geoip2 = { module = 'com.maxmind.geoip2:geoip2', version.ref = 'geoip2' }
+
+slf4j-api = { module = 'org.slf4j:slf4j-api', version.ref = 'slf4j' }
+logback-classic = { module = 'ch.qos.logback:logback-classic', version.ref = 'logback' }
+
+jakarta-validation-api = { module = 'jakarta.validation:jakarta.validation-api', version.ref = 'jakarta-validation' }
+jakarta-el-api = { module = 'jakarta.el:jakarta.el-api', version.ref = 'jakarta-el' }
+glassfish-jakarta-el = { module = 'org.glassfish:jakarta.el', version.ref = 'glassfish-jakarta-el' }
+hibernate-validator = { module = 'org.hibernate.validator:hibernate-validator', version.ref = 'hibernate-validator' }
+
+spring-context = { module = 'org.springframework:spring-context', version.ref = 'spring' }
+spring-boot-web = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'spring-boot' }
+spring-boot-test = { module = 'org.springframework.boot:spring-boot-starter-test', version.ref = 'spring-boot' }
+spock-spring = { module = 'org.spockframework:spock-spring', version.ref = 'spock' }
+
+[bundles]
+test-spock-core = ["spock-core", 'groovy-all']
+test-spock-spring = ["spock-spring", 'groovy-all', 'spring-boot-test']
+test-jakarta-validation = ['jakarta-el-api', 'glassfish-jakarta-el', 'hibernate-validator']

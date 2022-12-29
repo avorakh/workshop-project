@@ -1,0 +1,12 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+enableFeaturePreview("VERSION_CATALOGS")
+
+rootProject.name = 'workshop-project'
+
+include 'spring-web-rest-boot'
+include 'geoip2-pub'
+include 'jackson-geoip2-pub'
+include 'geoip2-svc'
+include 'maxmind-geoip2-svc'
+include 'config-geoip2-svc'
+include 'common-validation'
